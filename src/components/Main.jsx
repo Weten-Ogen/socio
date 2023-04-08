@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import requests from '../util/Requests';
-
+import {FaPlay} from 'react-icons/fa';
 
 const Main = () => {
     const [movies,setMovies] = useState([]);
@@ -45,10 +45,12 @@ const Main = () => {
             {movie?.title}
           </h1>
 
-          <div className='text-lg my-4'>
+          <div className='text-md md:text-lg my-6 flex items-center'>
 
           <button 
-          className='border capitalize bg-gray-300 text-black border-gray-300 py-2 px-5'>play
+          className='flex items-center gap-2 border capitalize bg-gray-300 text-black border-gray-300 py-2  px-5'>
+            <p>play</p> 
+          <FaPlay/>
           </button>
           <button 
           className='border capitalize  text-white border-gray-300 py-2 px-5 ml-4'>watch later
@@ -56,7 +58,7 @@ const Main = () => {
           </div>
 
           <p 
-          className='text-gray-400  text-sm'>
+          className='text-gray-400  text-sm my-4'>
             released:{movie?.release_date}
           </p>
           <p 

@@ -11,6 +11,7 @@ const Row = ({title,fetchUrl,rowId}) => {
     const [like, setLike] =useState(false);
 
     const [movies,setMovies] = useState([]);
+    
 
     const handleLike =() => {
       setLike(prev => !prev)
@@ -42,25 +43,28 @@ const Row = ({title,fetchUrl,rowId}) => {
         <BsChevronLeft 
         onClick={slideLeft} 
         size={40} 
-        className='bg-white rounded-full absolute opaciity-50 left-0 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block '/>
+        className='bg-white rounded-full absolute opaciity-50 left-0 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block p-2 '/>
         <div 
         id={'slider' + rowId}
-         className='w-full h-full  overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
+         className='w-full h-full flex items-center  overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
         {
+
           movies.map(item => {
+            
             return (
+              
               <Movie 
               key={item.id} 
               handleLike={handleLike} 
               like={like} 
-              data={item}
+              item={item}
             />)})
         }
         </div>
         <BsChevronRight 
         onClick={slideRight} 
         size={40} 
-        className='bg-white rounded-full absolute opaciity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block right-0 '/>
+        className='bg-white rounded-full absolute opaciity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block right-0 p-2 '/>
       </div>
     </>
   )

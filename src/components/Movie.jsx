@@ -3,11 +3,12 @@ import {FaHeart,FaRegHeart} from 'react-icons/fa';
 
 
 const Movie = ({item,like,handleLike}) => {
+  
   return (
     <div>
        <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 '>
             <img 
-            src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`} 
+            src={`https://image.tmdb.org/t/p/original/${item?.backdrop_path}`} 
             alt={item?.title}
             />
             <div 
@@ -21,9 +22,10 @@ const Movie = ({item,like,handleLike}) => {
                   {
                   like ? 
                   <FaHeart 
-                  className='absolute top-4 left-4 text-gray-300 '/> : 
+                  className='absolute top-4 left-4 text-red-700 '/> : 
                   <FaRegHeart 
-                  className='absolute top-4 left-4 text-gray-300 '/>
+                
+                  className='absolute top-4 left-4  overflow-hidden text-red-700 '/>
                   }
                 </p>
             </div>
