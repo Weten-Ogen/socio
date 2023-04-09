@@ -2,9 +2,14 @@ import React from 'react'
 
 const Account = () => {
   return (
-    <div>
+    <section 
+    className='w-full h-screen bg-black/20'
+    >
+      <div className=' max-w-[100%] h-full mx-auto'>
+          <div></div>
+      </div>
       
-    </div>
+    </section>
   )
 }
 
