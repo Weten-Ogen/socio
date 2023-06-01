@@ -26,11 +26,7 @@ const Home = () => {
       title='Top Rated' 
       fetchUrl={requests.requestTopRated} 
       />
-      <Row 
-      rowId='5' 
-      title='Horror' 
-      fetchUrl={requests.requestHorror} 
-      />
+   
     </div>
   )
 }
