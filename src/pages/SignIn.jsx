@@ -33,7 +33,7 @@ const SignIn = () => {
         <div className='fixed w-full px-5 sm:px-24 z-50 pt-14'>
           <div className='max-w-[450px]  h-[600px] mx-auto bg-black/75 text-white'>
             <div className='max-w-[320px] py-16 mx-auto '>
-              <h1 className='text-3xl font-bold capitalize'>sign up</h1>
+              <h1 className='text-3xl font-bold capitalize'>log in</h1>
               <form 
               onSubmit={handleSubmit}
               className='flex py-4 flex-col w-full'>
